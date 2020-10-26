@@ -100,5 +100,9 @@ img.medium {
 /* Rating */
 .rating span {
   color: #f0c040;
-  margin: 0.1rem;
+  margin: 0.2rem;
+}
+
+.rating span:last-child{
+  color: rgb(19, 12, 12)
 }

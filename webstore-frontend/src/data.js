@@ -13,7 +13,7 @@ const data = {
         },
         {
             _id: '2',
-            name: 'Adidas Superstar',
+            name: 'Vans casual',
             category: 'Shoes',
             image: '/images/shoes/shoes2.jpeg',
             price: 100,
