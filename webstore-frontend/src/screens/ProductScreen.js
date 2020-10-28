@@ -28,7 +28,7 @@ const ProductScreen = (props) => {
                     ></img>
                 </div>
 
-                <div className='col-1'></div>
+                <div className='col-1'>
                 <ul>
                     <li>
                         <h1>{product.name}</h1>
@@ -45,8 +45,9 @@ const ProductScreen = (props) => {
                         <p>{product.description}</p>
                     </li>
                 </ul>
+                </div>
                 <div className='col-1'>
-                    <div className='card-body'>
+                    <div className='card card-body'>
                         <ul>
                             <li>
                                 <div className='row'>
