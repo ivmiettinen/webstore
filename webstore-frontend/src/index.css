@@ -163,6 +163,24 @@ img.large {
 .success {
   color: rgb(13, 136, 13)
 }
-.error {
+.danger {
   color: rgb(228, 8, 8)
+}
+
+.alert{
+    padding: 1rem;
+    border: 0.1rem solid transparent;
+    border-radius: 05.rem;
+}
+
+.alert-info{
+    color: rgb(19, 19, 180);
+    background-color: whitesmoke;
+  
+}
+
+.alert-danger{
+    color: rgb(196, 35, 35);
+    background-color: rgb(241, 211, 211)
+  
 }

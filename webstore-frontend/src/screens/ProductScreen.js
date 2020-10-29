@@ -1,15 +1,17 @@
 import React from 'react'
-import Product from '../components/Product'
-import data from '../data'
+
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
+import products from './HomeScreen'
 
 
 const ProductScreen = (props) => {
-    const product = data.products.find((p) => p._id === props.match.params.id)
+  
+    
+    const product = products.find((p) => p._id === props.match.params.id)
 
     console.log('product', product)
-    console.log('props', props)
+    console.log('productscreen props', props)
 
     if (!product) {
         return <div>Product not found</div>
@@ -67,7 +69,7 @@ const ProductScreen = (props) => {
                                                 In Stock
                                             </span>
                                         ) : (
-                                            <span className='error'>
+                                            <span className='danger'>
                                                 Unavailable
                                             </span>
                                         )}
