@@ -4,7 +4,6 @@ import './App.css'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 
-
 function App() {
     return (
         <BrowserRouter>
@@ -26,7 +25,6 @@ function App() {
                         component={ProductScreen}
                     ></Route>
                     <Route path='/' component={HomeScreen} exact></Route>
-                    
                 </main>
                 <footer className='row center'>All right reserved</footer>
             </div>
