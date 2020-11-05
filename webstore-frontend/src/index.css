@@ -110,6 +110,18 @@ a.brand {
     font-size: 3rem;
     font-weight: bold;
 }
+
+.badge{
+    background-color: rgb(212, 21, 21);
+    color: rgba(255, 255, 255, 0.835);
+   border-radius: 50%;
+   padding: 0.2rem 0.7rem;
+   font-size: 1.4rem;
+   margin-left: 0.2rem
+}
+
+
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -124,7 +136,9 @@ a.brand {
 }
 
 .col-1{
-  flex: 1 1 25rem
+  flex: 1 1 25rem;
+  padding: 1%;
+
 }
 
 .col-2{
