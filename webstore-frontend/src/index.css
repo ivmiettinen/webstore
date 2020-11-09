@@ -56,48 +56,46 @@ a:hover {
     color: #ff8000;
 }
 
-ul{
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-li{
-  margin-top: 1rem;
+li {
+    margin-top: 1rem;
 }
 
 input,
 select,
 textarea,
 button {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 01.rem #a4a4a4 solid;
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* border: 01rem #a4a4a4 solid; */
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-button{
+button {
     background-color: grayscale;
     cursor: pointer;
 }
 
-
 input:hover,
 select:hover,
 textarea:hover,
-button:hover{
-  border: 0.2rem #404040 solid
+button:hover {
+    border: 0.2rem #404040 solid;
 }
 
-button.primary{
-  background-color: #f0c040;
+button.primary {
+    background-color: #f0c040;
 }
-button.block{
-  width: 100%;
+button.block {
+    width: 100%;
 }
 
 /* Header */
@@ -111,16 +109,14 @@ a.brand {
     font-weight: bold;
 }
 
-.badge{
+.badge {
     background-color: rgb(212, 21, 21);
     color: rgba(255, 255, 255, 0.835);
-   border-radius: 50%;
-   padding: 0.2rem 0.7rem;
-   font-size: 1.4rem;
-   margin-left: 0.2rem
+    border-radius: 50%;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.4rem;
+    margin-left: 0.2rem;
 }
-
-
 
 .row {
     display: flex;
@@ -135,26 +131,37 @@ a.brand {
     align-items: flex-start;
 }
 
-.col-1{
-  flex: 1 1 25rem;
-  padding: 1%;
-
+.col-1 {
+    flex: 1 1 25rem;
+    padding: 1%;
 }
 
-.col-2{
-  flex: 2 1 50rem;
+.col-2 {
+    flex: 2 1 50rem;
 }
+
+.min-30 {
+    min-width: 30rem;
+}
+
+
 /* Image */
 img {
     border-radius: 0.5rem;
 }
+
+img.small {
+    max-width: 5rem;
+    width: 100%;
+}
+
 img.medium {
     max-width: 29rem;
     width: 100%;
 }
 
 img.large {
-  width: 100%
+    width: 100%;
 }
 
 /* Card */
@@ -186,26 +193,24 @@ img.large {
 /* Alert */
 
 .success {
-  color: rgb(13, 136, 13)
+    color: rgb(13, 136, 13);
 }
 .danger {
-  color: rgb(228, 8, 8)
+    color: rgb(228, 8, 8);
 }
 
-.alert{
+.alert {
     padding: 1rem;
     border: 0.1rem solid transparent;
-    border-radius: 05.rem;
+    border-radius: 05rem;
 }
 
-.alert-info{
+.alert-info {
     color: rgb(19, 19, 180);
     background-color: whitesmoke;
-  
 }
 
-.alert-danger{
+.alert-danger {
     color: rgb(196, 35, 35);
-    background-color: rgb(241, 211, 211)
-  
+    background-color: rgb(241, 211, 211);
 }
