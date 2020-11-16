@@ -18,7 +18,6 @@ const data = {
 
     products: [
         {
-            _id: '1',
             name: 'Nike everyday sneakers',
             category: 'Shoes',
             image: '/images/shoes/shoes1.jpeg',
@@ -30,7 +29,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '2',
             name: 'Vans casual',
             category: 'Shoes',
             image: '/images/shoes/shoes2.jpeg',
@@ -42,7 +40,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '3',
             name: 'Lacoste textile shoes',
             category: 'Shoes',
             image: '/images/shoes/shoes3.jpg',
@@ -54,7 +51,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '4',
             name: 'Gardion suit shoes',
             category: 'Shoes',
             image: '/images/shoes/shoes4.jpeg',
@@ -66,7 +62,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '5',
             name: 'Nike OG shoes',
             category: 'Shoes',
             image: '/images/shoes/shoes5.jpeg',
@@ -78,7 +73,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '6',
             name: 'Guantimo summer shoes',
             category: 'Shoes',
             image: '/images/shoes/shoes6.jpeg',
