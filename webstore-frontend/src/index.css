@@ -214,3 +214,21 @@ img.large {
     color: rgb(196, 35, 35);
     background-color: rgb(241, 211, 211);
 }
+
+/* Form */
+
+.form{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.form label {
+    margin: 1rem 0;
+    display: block;
+}
