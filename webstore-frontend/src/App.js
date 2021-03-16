@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Link, Route } from 'react-router-dom'
 import './App.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 import SinginScreen from './screens/SinginScreen'
+import {signout} from './actions/userActions'
 
 function App() {
     const cart = useSelector((state) => state.cart)
@@ -15,6 +16,19 @@ function App() {
     const userSignin = useSelector((state) => state.userSignin)
 
     const { userInfo } = userSignin
+
+
+    const dispatch = useDispatch()
+
+    const signoutHandler = (e) => {
+        console.log('eeeee', e)
+
+        e.preventDefault()
+
+       dispatch(signout())
+        
+
+    }
 
     return (
         <BrowserRouter>
@@ -27,11 +41,24 @@ function App() {
                     </div>
                     <div>
                         <Link to='/cart'>Cart</Link>
-                        {cartItems.length > 0 && (
+                        {cartItems !== null && cartItems.length > 0 && (
                             <span className='badge'>{cartItems.length}</span>
                         )}
                         {userInfo ? (
-                            <Link to='#'>{userInfo.name}</Link>
+                            <div className='dropdown'>
+                                <Link to='#'>
+                                    {userInfo.name}{' '}
+                                    <i className='fa fa-caret-down'></i>
+                                </Link>
+                                <ul className='dropdown-content'>
+                                    <Link
+                                        to='#signout'
+                                        onClick={signoutHandler}
+                                    >
+                                        Sign out
+                                    </Link>
+                                </ul>
+                            </div>
                         ) : (
                             <Link to='/signin'>Sign In</Link>
                         )}

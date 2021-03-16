@@ -36,7 +36,7 @@ export default function CartScreen(props) {
         <div className='row top'>
             <div className='col-2'>
                 <h1>Shopping cart</h1>
-                {cartItems.length === 0 ? (
+                {cartItems === null || cartItems.length === 0 ? (
                     <MessageBox>
                         Cart is empty. <Link to='/'>Go shopping</Link>
                     </MessageBox>
