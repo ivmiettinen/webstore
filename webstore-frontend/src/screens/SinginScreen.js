@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signin } from '../actions/userActions';
 
-export default function SinginScreen() {
+export default function SinginScreen(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -13,6 +13,8 @@ export default function SinginScreen() {
     e.preventDefault();
     dispatch(signin(email, password));
   };
+
+
 
   return (
     <div>
