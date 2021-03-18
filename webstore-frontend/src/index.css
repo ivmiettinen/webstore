@@ -191,6 +191,9 @@ img.large {
 }
 
 /* Alert */
+.loading{
+    display: block
+}
 
 .success {
     color: rgb(13, 136, 13);

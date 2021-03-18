@@ -24,7 +24,7 @@ export default function RegisterScreen(props) {
     const submitHandler = (e) => {
         e.preventDefault()
         if (password !== confirmPassword) {
-            alert(`Password and confirm pass don't match. `)
+            alert(`Password and confirm password don't match. `)
         } else {
             dispatch(register(name, email, password))
         }
@@ -87,13 +87,13 @@ export default function RegisterScreen(props) {
                 <div>
                     <label />
                     <button className='primary' type='submit'>
-                        Register
+                        Register to create an account
                     </button>
                     <div>
                         <label />
                         <div>
                             Already have an account?{' '}
-                            <Link to='/signin'>Sign-in</Link>
+                            <Link to={`/signin?redirect=${redirect}`}>Sign-in</Link>
                         </div>
                     </div>
                 </div>
