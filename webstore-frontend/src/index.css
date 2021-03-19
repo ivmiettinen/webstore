@@ -144,7 +144,6 @@ a.brand {
     min-width: 30rem;
 }
 
-
 /* Image */
 img {
     border-radius: 0.5rem;
@@ -191,8 +190,8 @@ img.large {
 }
 
 /* Alert */
-.loading{
-    display: block
+.loading {
+    display: block;
 }
 
 .success {
@@ -220,7 +219,7 @@ img.large {
 
 /* Form */
 
-.form{
+.form {
     max-width: 60rem;
     margin: 0 auto;
 }
@@ -236,12 +235,12 @@ img.large {
     display: block;
 }
 
-.dropdown{
+.dropdown {
     display: inline-block;
     position: relative;
 }
 
-.dropdown-content{
+.dropdown-content {
     position: absolute;
     display: none;
     right: 0;
@@ -255,4 +254,19 @@ img.large {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Checkout steps */
+
+.checkout-steps > div {
+    border: 0.3rem white solid;
+    color: #c0c0c0;
+    flex: 2;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.checkout-steps > div.active {
+    border-top-color: #f08020;
+    color: #f08020;
 }
