@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { register } from '../actions/userActions'
@@ -16,44 +16,30 @@ export default function RegisterScreen(props) {
         : '/'
 
     const userRegister = useSelector((state) => state.userRegister)
-
     const { userInfo, loading, error } = userRegister
 
     const dispatch = useDispatch()
-
     const submitHandler = (e) => {
         e.preventDefault()
         if (password !== confirmPassword) {
-            alert(`Password and confirm password don't match. `)
+            alert('Password and confirm password are not match')
         } else {
             dispatch(register(name, email, password))
         }
     }
-
     useEffect(() => {
         if (userInfo) {
             props.history.push(redirect)
         }
     }, [props.history, redirect, userInfo])
-
     return (
         <div>
             <form className='form' onSubmit={submitHandler}>
                 <div>
-                    <h1>Register</h1>
+                    <h1>Create Account</h1>
                 </div>
                 {loading && <LoadingBox></LoadingBox>}
-                {error && <MessageBox varint='danger'>{error}</MessageBox>}
-                <div>
-                    <label htmlFor='email'>Email address</label>
-                    <input
-                        type='email'
-                        id='email'
-                        placeholder='Enter email'
-                        required
-                        onChange={(e) => setEmail(e.target.value)}
-                    ></input>
-                </div>
+                {error && <MessageBox variant='danger'>{error}</MessageBox>}
                 <div>
                     <label htmlFor='name'>Name</label>
                     <input
@@ -62,6 +48,16 @@ export default function RegisterScreen(props) {
                         placeholder='Enter name'
                         required
                         onChange={(e) => setName(e.target.value)}
+                    ></input>
+                </div>
+                <div>
+                    <label htmlFor='email'>Email address</label>
+                    <input
+                        type='email'
+                        id='email'
+                        placeholder='Enter email'
+                        required
+                        onChange={(e) => setEmail(e.target.value)}
                     ></input>
                 </div>
                 <div>
@@ -75,11 +71,11 @@ export default function RegisterScreen(props) {
                     ></input>
                 </div>
                 <div>
-                    <label htmlFor='confirmPassword'>Confirm password</label>
+                    <label htmlFor='confirmPassword'>Confirm Password</label>
                     <input
                         type='password'
                         id='confirmPassword'
-                        placeholder='Confirm password'
+                        placeholder='Enter confirm password'
                         required
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
@@ -87,14 +83,14 @@ export default function RegisterScreen(props) {
                 <div>
                     <label />
                     <button className='primary' type='submit'>
-                        Register to create an account
+                        Register
                     </button>
+                </div>
+                <div>
+                    <label />
                     <div>
-                        <label />
-                        <div>
-                            Already have an account?{' '}
-                            <Link to={`/signin?redirect=${redirect}`}>Sign-in</Link>
-                        </div>
+                        Already have an account?{' '}
+                        <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
                     </div>
                 </div>
             </form>
