@@ -1,8 +1,7 @@
 import express from 'express';
-import expressAsyncHandler from 'express-async-handler'
-import Order from '../models/orderModel.js'
+import expressAsyncHandler from 'express-async-handler';
+import Order from '../models/orderModel.js';
 import { isAuth } from '../utils.js';
-
 
 const orderRouter = express.Router();
 
@@ -26,9 +25,9 @@ orderRouter.post(
       const createdOrder = await order.save();
       res
         .status(201)
-        .send({ message: 'New order created', order: createdOrder });
+        .send({ message: 'New Order Created', order: createdOrder });
     }
   })
 );
 
-export default orderRouter
+export default orderRouter;

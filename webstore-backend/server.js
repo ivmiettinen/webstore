@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import productRouter from './routers/productRouter.js'
 import userRouter from './routers/userRouter.js'
 import orderRouter from './routers/orderRouter.js'
+import cors from 'cors'
 
 dotenv.config()
 
@@ -13,6 +14,10 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+
+
+app.use(cors());
+app.options('*', cors());
 
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/webstore', {
